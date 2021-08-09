@@ -15,7 +15,7 @@ fun main(args: Array<String>) {
 
     // En este caso indicamos explicitamente que la lambda requiere de dos parametros Int y que devuelve un Int.
     // Atencion, devuelve la ultima linea de la lambda
-    val hazSuma: (Int, Int) -> Int = { num1: Int, num2: Int -> num1 + num2 }
+    val hazSuma = { num1: Int, num2: Int -> num1 + num2 }
     val hazResta: (Int, Int) -> Int = { num1: Int, num2: Int -> num1 - num2 }
 
     println("Sumo ${hazSuma(2,1)} como parametro.")
@@ -23,7 +23,7 @@ fun main(args: Array<String>) {
 
     println("Sumo ${example(hazSuma)} desde una lambda.")
     println("Resto ${example(hazResta)} desde una lambda.")
-
+    
 }
 
 fun example(functionAsParameter: (Int, Int) -> Int) : Int {
